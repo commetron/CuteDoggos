@@ -1,12 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text } from 'react-native';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { DoggosScreen } from './src/screens/DoggosScreen';
 
-export default function App() {
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <QueryClientProvider client={new QueryClient}>
+      <DoggosScreen />
+    </QueryClientProvider>
   );
 }
 
@@ -18,3 +20,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
