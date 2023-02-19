@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 
 async function fetchData() {
-    const result = await fetch(`https://api.thedogapi.com/v1/images/search?&api_key=live_t2vmISTrUFv6nMUX4mRhakcyx7KnYVLha83IBs4Oobes3bMqfUS5bC4T1buI4BiP`);
+    const result = await fetch(`https://dog.ceo/api/breeds/image/random`);
     const json = await result.json();
     return json;
 }

@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet} from 'react-native';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { DoggosScreen } from './src/screens/DoggosScreen';
+import DoggosScreen from './src/screens/DoggosScreen';
 
 
 const App = () => {
   return (
     <QueryClientProvider client={new QueryClient}>
-      <DoggosScreen />
+      <DoggosScreen/>
     </QueryClientProvider>
   );
 }

@@ -1,23 +1,20 @@
-import { Card } from 'react-native-paper';
-import { Text, Image } from "react-native";
+
+import {  Image, View } from "react-native";
 import * as React from "react";
 
 interface ItemProps {
     item: {
-        id: string
-        url: string
+        message: string
     }
 };
 
 export const Cards = ({ item }: ItemProps) => (
-    <Card>
-        <Card.Title title={item.id} />
-        <Card.Content>
+        <View style={{alignContent:'center', justifyContent: 'center', margin: 5, marginTop: 200}}>
             <Image source={{
-                uri: item.url
+                uri: item.message
             }}
-                style={{ width: 200, height: 200 }}
+                style={{ width: 400, height: 400}}
             />
-        </Card.Content>
-    </Card>
+        </View>
 );
+
