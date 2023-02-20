@@ -51,7 +51,7 @@ const App = () => {
   if (!appIsReady) {
     return null;
   }
-
+  onLayoutRootView();
   return(
   <NavigationContainer>
     
