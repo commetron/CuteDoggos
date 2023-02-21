@@ -8,7 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import AccueilScreen from './src/screens/AccueilScreen';
 import RandomDoggo from './src/screens/RandomDoggo';
-import ListeDoggoScreen from './src/screens/ListeDoggoScreen';
+import ListeDoggo from './src/screens/ListeDoggo';
 
 
 const tab = createMaterialBottomTabNavigator();
@@ -70,8 +70,8 @@ const App = () => {
         return <Ionicons name={iconName} size={20}/>
       }
     })}>
-      <tab.Screen name='accueil' component={AccueilScreen} />
-      <tab.Screen name='Liste' component={ListeDoggoScreen} />
+      <tab.Screen name='accueil' component={AccueilScreen}/>
+      <tab.Screen name='Liste' component={ListeDoggo} />
       <tab.Screen name='randomDoggo' component={RandomDoggo} />
     </tab.Navigator>
   </NavigationContainer>
