@@ -1,17 +1,14 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import { StyleSheet, View, Text} from 'react-native';
-import Ionicons from "react-native-vector-icons/Ionicons";
+import { StyleSheet} from 'react-native';
 import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
-import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import AccueilScreen from './src/screens/AccueilScreen';
-import RandomDoggo from './src/screens/RandomDoggo';
-import ListeDoggo from './src/screens/ListeDoggo';
+import  BottomTabNavigator   from './src/navigations/BottomTabNavigator';
+ 
 
 
-const tab = createMaterialBottomTabNavigator();
+
+
 SplashScreen.preventAutoHideAsync();
 
 const App = () => {
@@ -53,28 +50,7 @@ const App = () => {
   }
   onLayoutRootView();
   return(
-  <NavigationContainer>
-    
-    <tab.Navigator
-    screenOptions={({route}) => ({
-      tabBarIcon: ({focused, color}) => {
-        let iconName;
-
-        if (route.name == "accueil" ){
-          iconName = "home";
-        } else if (route.name == "randomDoggo"){
-          iconName = "shuffle-outline"
-        } else if (route.name == "Liste"){
-          iconName = "list-outline"
-        }
-        return <Ionicons name={iconName} size={20}/>
-      }
-    })}>
-      <tab.Screen name='accueil' component={AccueilScreen}/>
-      <tab.Screen name='Liste' component={ListeDoggo} />
-      <tab.Screen name='randomDoggo' component={RandomDoggo} />
-    </tab.Navigator>
-  </NavigationContainer>
+    <BottomTabNavigator />
   );
 }
 

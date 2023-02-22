@@ -2,10 +2,10 @@ import { StyleSheet, View, Text } from "react-native";
 import React from "react";
 
 
- export default function AccueilScreen(){
+ export default function TestScreen(){
     return(
       <View style={styles.container}>
-        <Text>Mon accueil</Text>
+        <Text>Test</Text>
       </View>
     );    
   }
