@@ -3,7 +3,11 @@ import * as React from "react";
 import ListeDoggoScreen from '../screens/ListeDoggoScreen';
 import TestScreen from '../screens/TestScreen';
 import Routes from './Routes';
-
+export type RouteParams = {
+  Breed: {
+    message: any;
+  }
+}
 const Stack = createStackNavigator();
 function StackScreenNavigator(){
       return(

@@ -12,8 +12,9 @@ type routeParams = {
 
 export function BreedCards  ({content}: any)  {
   const navigation = useNavigation<NativeStackNavigationProp<routeParams>>();
+
   return(
-    <TouchableOpacity onPress={() => navigation.navigate(Routes.TEST_SCREEN)} >
+    <TouchableOpacity onPress={() => navigation.navigate(Routes.TEST_SCREEN, content)} >
       <Card style={styles.card}>
         <Card.Content>
           <Text>{content}</Text>
