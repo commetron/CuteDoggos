@@ -1,23 +1,24 @@
 import * as React from "react";
-import { Dimensions, StyleSheet,  Text, TouchableOpacity } from "react-native";
-import { useNavigation} from '@react-navigation/native';
+import { Dimensions, Route, StyleSheet,  Text, TouchableOpacity } from "react-native";
+import { NavigationProp, RouteProp, useNavigation} from '@react-navigation/native';
 import { Card } from "react-native-paper";
 import Routes from "../navigations/Routes";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+type Props = {
+  content: any
+  navigation:NavigationProp<Route>
 
-type routeParams = {
-  Test: undefined;
 }
 
 
-export function BreedCards  ({content}: any)  {
-  const navigation = useNavigation<NativeStackNavigationProp<routeParams>>();
+export function BreedCards  (props: Props)  {
+  
 
   return(
-    <TouchableOpacity onPress={() => navigation.navigate(Routes.TEST_SCREEN, content)} >
+    <TouchableOpacity onPress={() => props.navigation.navigate(Routes.BREED_DETAIL_SCREEN, {content: props.content})} >
       <Card style={styles.card}>
         <Card.Content>
-          <Text>{content}</Text>
+          <Text>{props.content}</Text>
         </Card.Content>
       </Card>
     </TouchableOpacity>

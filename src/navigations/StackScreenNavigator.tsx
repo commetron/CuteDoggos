@@ -1,20 +1,16 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from "react";
 import ListeDoggoScreen from '../screens/ListeDoggoScreen';
-import TestScreen from '../screens/TestScreen';
 import Routes from './Routes';
-export type RouteParams = {
-  Breed: {
-    message: any;
-  }
-}
+import BreedScreen from '../screens/BreedScreen';
+
 const Stack = createStackNavigator();
 function StackScreenNavigator(){
       return(
           <Stack.Navigator>
             <Stack.Group>
                 <Stack.Screen name="Breeds" component={ListeDoggoScreen} />
-                <Stack.Screen name={Routes.TEST_SCREEN} component={TestScreen}/>
+                <Stack.Screen name={Routes.BREED_DETAIL_SCREEN} component={BreedScreen}/>
             </Stack.Group>
           </Stack.Navigator>
       );

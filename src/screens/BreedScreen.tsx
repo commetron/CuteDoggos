@@ -1,9 +1,12 @@
 import { StyleSheet, View, Text } from "react-native";
 import React from "react";
+import { ComponentNavigationProps } from "../navigations/Routes";
+import { useQuery } from "react-query";
 
+ export default function BreedScreen(props: ComponentNavigationProps){
+  const content = props?.route?.params?.content;
 
- export default function TestScreen({route} : any){
-  const { content } = route.params;
+  
     return(
       <View style={styles.container}>
         <Text>{content}</Text>

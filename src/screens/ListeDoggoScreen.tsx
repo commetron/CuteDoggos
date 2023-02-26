@@ -3,8 +3,9 @@ import React from "react";
 import { useDoggosBreeds } from "../hooks/useDoggosBreed";
 
 import { BreedCards } from "../components/BreedCards"
+import { ComponentNavigationProps } from "../navigations/Routes";
 
-function ListeDoggoScreen (){
+function ListeDoggoScreen (props: ComponentNavigationProps){
   const { data, status } = useDoggosBreeds();
  
   if (status === 'loading') { return <Text>Loading</Text>; }
@@ -17,7 +18,7 @@ function ListeDoggoScreen (){
       
         <FlatList
         data={breeds}
-        renderItem={({item}) => <BreedCards content={item}/> }
+        renderItem={({item}) => <BreedCards navigation={props.navigation} content={item}/> }
         keyExtractor={item => item.toString()}
       />
      
