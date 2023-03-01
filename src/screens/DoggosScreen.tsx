@@ -9,12 +9,13 @@ const DoggosScreen = () => {
 
     if (status === 'loading') { return <Text>Loading</Text>; }
     if (status === 'error') { return <Text>Error</Text>; }
-    return(
+    console.log(data)
+    return (
         <><View style={styles.container}>
             <Cards item={data} />
             <RefreshingButton refetch={refetch} />
         </View></>
-        );
+    );
 };
 
 const styles = StyleSheet.create({
