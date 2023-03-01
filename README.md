@@ -22,3 +22,7 @@ https://dog.ceo/dog-api/documentation/
 - Download `Expo Go` on your phone device
 - You can : copy `exp://exp.host/@laneresesteban/CuteDoggos?release-channel=default` on your device 
 - Or scan the QR code on this link `https://expo.dev/@laneresesteban/CuteDoggos`
+
+# Other
+
+If you have any comment or advices to improve myself I would like to read it, ty. 
