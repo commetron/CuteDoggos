@@ -1,9 +1,11 @@
 # CuteDoggos
 
-First project with React Native.
+First project with React Native for a school project.
 
 # Features
 
+- Bottom Tab navigator
+- Stack Navigation
 - Randomize Dogs images  
 - Breed List
 - Randomize Dogs images by breeds 
