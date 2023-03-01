@@ -4,6 +4,7 @@ First project with React Native for a school project.
 
 # Features
 
+- SplashScreen
 - Bottom Tab navigator
 - Stack Navigation
 - Randomize Dogs images  
